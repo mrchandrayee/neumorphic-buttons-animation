@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#e0e5ec">
+  <!-- Primary SEO -->
+  <title>Neumorphic Buttons Animation | mrchandrayee</title>
+  <meta name="description" content="A collection of soft neumorphic button animations with pressed states and depth illusions. Pure HTML, CSS & JavaScript.">
+  <meta name="author" content="mrchandrayee">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrchandrayee.github.io/neumorphic-buttons-animation/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrchandrayee.github.io/neumorphic-buttons-animation/">
+  <meta property="og:title" content="Neumorphic Buttons Animation | mrchandrayee">
+  <meta property="og:description" content="A collection of soft neumorphic button animations with pressed states and depth illusions. Pure HTML, CSS & JavaScript.">
+  <meta property="og:image" content="https://mrchandrayee.github.io/neumorphic-buttons-animation/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mrchandrayee.github.io/neumorphic-buttons-animation/">
+  <meta name="twitter:title" content="Neumorphic Buttons Animation | mrchandrayee">
+  <meta name="twitter:description" content="A collection of soft neumorphic button animations with pressed states and depth illusions. Pure HTML, CSS & JavaScript.">
+  <meta name="twitter:image" content="https://mrchandrayee.github.io/neumorphic-buttons-animation/preview.png">
+  <meta name="twitter:creator" content="@mrchandrayee">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Neumorphic Buttons Animation",
+    "description": "A collection of soft neumorphic button animations with pressed states and depth illusions. Pure HTML, CSS & JavaScript.",
+    "url": "https://mrchandrayee.github.io/neumorphic-buttons-animation/",
+    "author": { "@type": "Person", "name": "mrchandrayee", "url": "https://github.com/mrchandrayee" },
+    "applicationCategory": "WebApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+<meta name="theme-color" content="#071310">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <header><h1>Neumorphic Buttons</h1><h2>Animation</h2></header>
+  <section class="demo" aria-label="Neumorphic button animation demo">
+    <div class="controls">
+      <button class="neo play" id="playButton" type="button" aria-pressed="false">
+        <span class="play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path class="play-shape" d="m10 8 6 4-6 4z"/></svg></span>
+        <span class="play-label">Play</span>
+        <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      </button>
+      <div class="share-shell" id="shareShell">
+        <button class="neo share" id="shareButton" type="button" aria-expanded="false">
+          <svg class="share-main" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.3 10.8 7.4-4.5M8.3 13.2l7.4 4.5"/></svg>
+          <span>Share</span>
+        </button>
+        <div class="socials" aria-hidden="true">
+          <button class="social close-share" type="button" aria-label="Close share options"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+          <button class="social" type="button" aria-label="Share on X" data-share="x"><svg viewBox="0 0 24 24"><path d="M5 4h4.2l9.8 16h-4.2L5 4Zm1 16L18 4M5 4l14 16"/></svg></button>
+          <button class="social facebook" type="button" aria-label="Share on Facebook" data-share="facebook">f</button>
+          <button class="social" type="button" aria-label="Copy link" data-share="copy"><svg viewBox="0 0 24 24"><path d="M9.5 14.5 14.5 9.5M8 16l-1.2 1.2a4 4 0 0 1-5.7-5.7l4-4a4 4 0 0 1 5.7 0M16 8l1.2-1.2a4 4 0 0 1 5.7 5.7l-4 4a4 4 0 0 1-5.7 0"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p class="hint" id="hint" aria-live="polite">Tap Play or Share to explore the interactions.</p>
+  <button class="reset" id="reset" type="button">↻ Reset demo</button>
+  <footer><span></span> CODE_AND_CHILL</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

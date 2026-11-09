@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box}
+:root{--bg:#071310;--surface:#dce9e4;--ink:#344a43;--teal:#12a98d;--shadow-light:#f4fff9;--shadow-dark:#b8c5c0}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg);color:#f3faf7;font-family:Inter,system-ui,sans-serif}
+.page{width:min(100%,520px);text-align:center}
+header{margin-bottom:30px}
+h1,h2{font-size:14px;line-height:1.05;font-weight:800;letter-spacing:-.5px;margin:0}
+h2{font-size:14px;color:#19c5a5;margin-top:1px}
+.demo{height:106px;background:var(--surface);border-radius:6px;display:grid;place-items:center;box-shadow:0 12px 35px #0003}
+.controls{width:100%;display:flex;flex-direction:column;align-items:center;gap:9px}
+.neo{height:27px;border:0;border-radius:30px;background:var(--surface);color:var(--ink);display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font:500 7px Inter,sans-serif;box-shadow:5px 5px 10px var(--shadow-dark),-5px -5px 10px var(--shadow-light);transition:box-shadow .2s,transform .2s,width .38s cubic-bezier(.2,.8,.2,1),color .2s}
+.neo:hover{transform:translateY(-1px)}
+.neo:active{box-shadow:inset 4px 4px 8px var(--shadow-dark),inset -4px -4px 8px var(--shadow-light);transform:scale(.98)}
+.play{width:66px;padding:0 10px;overflow:hidden}
+.play-icon{width:15px;height:15px;display:grid;place-items:center;flex:none}
+.play-icon svg{width:15px;height:15px;fill:none;stroke:#536a61;stroke-width:1.4}
+.play-icon .play-shape{fill:#536a61;stroke:none}
+.play-label{white-space:nowrap;transition:opacity .2s,width .3s}
+.wave{display:none;align-items:center;gap:2px;height:15px}
+.wave i{display:block;width:2px;height:4px;border-radius:3px;background:var(--teal)}
+.play.is-playing{width:111px;box-shadow:inset 3px 3px 6px var(--shadow-dark),inset -3px -3px 6px var(--shadow-light)}
+.play.is-playing .play-label{display:none}
+.play.is-playing .wave{display:flex}
+.play.is-playing .play-shape{d:path("M8 7h3v10H8z M13 7h3v10h-3z");fill:#159c83}
+.play.is-playing .wave i{animation:equalize .65s ease-in-out infinite alternate}
+.play.is-playing .wave i:nth-child(3n){animation-delay:-.4s}.play.is-playing .wave i:nth-child(2n){animation-delay:-.2s}.play.is-playing .wave i:nth-child(4n){animation-delay:-.55s}
+@keyframes equalize{from{height:3px}to{height:14px}}
+.share-shell{height:27px;position:relative;display:flex;justify-content:center;align-items:center}
+.share{width:70px;padding:0 11px;position:relative;z-index:2}
+.share svg{width:12px;height:12px;fill:none;stroke:#536a61;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.share-shell.expanded .share{width:0;opacity:0;padding:0;overflow:hidden;box-shadow:none;pointer-events:none}
+.socials{position:absolute;left:50%;top:0;transform:translateX(-50%) scale(.86);width:0;height:27px;display:flex;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .25s,transform .3s,width .35s}
+.share-shell.expanded .socials{width:132px;opacity:1;transform:translateX(-50%) scale(1);pointer-events:auto}
+.social{height:15px;width:15px;padding:0;border:0;border-radius:50%;background:#586b63;color:#e7f1ed;display:grid;place-items:center;cursor:pointer;font:bold 11px Arial;transition:transform .18s,background .18s}
+.social:hover{transform:scale(1.16);background:#159e84}
+.social svg{width:9px;height:9px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.social.facebook{font-family:Arial,sans-serif;font-size:12px}
+.hint{margin:19px 0 10px;color:#71827a;font-size:8px}
+.reset{border:1px solid #28433b;border-radius:18px;padding:7px 12px;background:transparent;color:#9aafa6;font-size:8px;cursor:pointer}
+.reset:hover{background:#10231e}
+footer{margin-top:24px;color:#768b82;font-size:8px;font-weight:700;letter-spacing:1.2px}
+footer span{display:inline-block;width:5px;height:5px;border-radius:50%;background:#1ac5a3;margin:0 5px 1px 0}
+@media(max-width:360px){.demo{margin:0 -2px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
